@@ -28,6 +28,7 @@ pipeline {
                 
                 sh '''
                     test -f build/$BUILD_FILE_NAME
+                    npm ci
                     npm test
                 '''
             }
