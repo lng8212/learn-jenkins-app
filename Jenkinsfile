@@ -25,8 +25,9 @@ pipeline {
 
         stage('Test') {
             steps {
-                test -f build/$BUILD_FILE_NAME
+                
                 sh '''
+                    test -f build/$BUILD_FILE_NAME
                     npm test
                 '''
             }
